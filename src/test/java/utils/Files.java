@@ -1,5 +1,6 @@
 package utils;
 
+import com.codeborne.xlstest.XLS;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
@@ -23,7 +24,6 @@ public class Files {
     }
 
     public static File getFile(String path) {
-
         return new File(path);
     }
 
@@ -72,5 +72,9 @@ public class Files {
         }
 
         return result;
+    }
+
+    public static String getCellValueXlsFile(XLS xls, int sheet, int row, int cell) {
+        return xls.excel.getSheetAt(sheet).getRow(row).getCell(cell).toString();
     }
 }

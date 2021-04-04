@@ -1,9 +1,9 @@
 package tests;
 
+import net.lingala.zip4j.exception.ZipException;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.util.zip.ZipException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
@@ -12,7 +12,7 @@ import static utils.Zip.unzip;
 
 public class ZipFileTest {
     @Test
-    void zipWithPasswordTest() throws IOException, ZipException, net.lingala.zip4j.exception.ZipException {
+    void zipWithPasswordTest() throws IOException, ZipException {
         String zipFilePath = "./src/test/resources/files/1.zip";
         String unzipFolderPath = "./src/test/resources/files/unzip";
         String zipPassword = "123";

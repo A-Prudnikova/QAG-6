@@ -13,6 +13,7 @@ public class TxtFileTest {
     void txtTest() throws IOException {
         String txtFilePath = "./src/test/resources/files/1.txt";
         String expectedData = "567az";
+
         String actualData = readTextFromPath(txtFilePath);
         assertThat(actualData, containsString(expectedData));
     }

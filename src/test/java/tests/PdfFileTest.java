@@ -14,6 +14,7 @@ public class PdfFileTest {
     void pdfTest() throws IOException {
         String pdfFilePath = "./src/test/resources/files/1.pdf";
         String expectedData = "100% DISCOUNT CODE";
+
         PDF pdf = new PDF(getFile(pdfFilePath));
         assertThat(pdf, containsText(expectedData));
     }
