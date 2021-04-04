@@ -23,7 +23,6 @@ public class Files {
     }
 
     public static File getFile(String path) {
-
         return new File(path);
     }
 
